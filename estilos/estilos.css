@@ -6,7 +6,8 @@ body, html {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #111;
+    color: white;
 }
 
 /* Contenedor central */
@@ -14,7 +15,7 @@ body, html {
     text-align: center;
 }
 
-/* Estilos de la imagen */
+/* Estilos del GIF */
 .centered-image {
     width: 300px; /* Ajusta el tamaño según tus necesidades */
     height: auto;
@@ -22,16 +23,23 @@ body, html {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Texto parpadeante */
-@keyframes blinking {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+/* Texto brillante */
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+    }
 }
 
-.blinking-text {
+.glowing-text {
     margin-top: 20px;
-    font-size: 1.5em;
-    color: #333;
-    animation: blinking 1s infinite;
+    font-size: 3em; /* Tamaño de fuente aumentado */
+    animation: glowing 1.5s infinite alternate;
+    color: #fff;
 }
+
