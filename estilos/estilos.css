@@ -23,19 +23,28 @@ body, html {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Animación de parpadeo */
+/* Animación de parpadeo, cambio de tamaño y color */
 @keyframes blinking {
     0%, 100% {
         opacity: 1;
+        font-size: 3em; /* Tamaño original */
+        color: #fff; /* Color blanco original */
+        text-shadow: 0 0 10px #fff, 0 0 20px #00ffea, 0 0 30px #00ffea, 0 0 40px #00ffea;
     }
     50% {
-        opacity: 0;
+        opacity: 0.5;
+        font-size: 4em; /* Tamaño aumentado */
+        color: red; /* Color rojo al agrandarse */
+        text-shadow: 0 0 5px #fff, 0 0 10px red, 0 0 15px red, 0 0 20px red;
     }
 }
 
 .glowing-text {
     margin-top: 20px;
-    font-size: 3em; /* Tamaño de fuente aumentado */
+    font-size: 3em; /* Tamaño de fuente inicial */
     animation: blinking 1s infinite;
     color: #fff;
+    font-weight: bold;
+    text-align: center;
 }
+
